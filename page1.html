@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS3 1st Coding Exercise/Hands On</title>
+</head>
+<body>
+    <p id="output"></p>
+    <script>
+        function main(){
+            var num1 = prompt("Enter a first number: ");
+            var num2 = prompt("Enter a second number: ");
+
+            if (isNaN(num1)){
+                window.alert("Your input is not a number.");
+                document.write("Invalid input.");
+                return;
+            } else{
+                num1 = parseFloat(num1);
+            }
+
+            if (isNaN(num2)){
+                window.alert("Your input is not a number.");
+                document.write("Invalid input.");
+                return;
+            } else{
+                num2 = parseFloat(num2);
+            }
+
+            document.getElementById("output").innerHTML = "The inputs before swapping: "+num1+" and "+num2 + "<br>";
+            
+            var holder = num1;
+            num1 = num2;
+            num2 = holder;
+
+            var sum = num1+num2;
+
+            document.getElementById("output").innerHTML += "Swapped numbers: " + num1 + " and " + num2 + "<br>";
+            document.getElementById("output").innerHTML += "The sum of the two numbers is "+sum;
+        }
+
+        main();
+    </script>
+</body>
+</html>
